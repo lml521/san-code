@@ -1,0 +1,24 @@
+/* components/code/code.wxss */
+.scan-code{
+  width: 300rpx;
+  height: 300rpx;
+  background-color: #f5ba47;
+  border-radius: 50%;
+  margin-top: 100rpx;
+  border: 20rpx solid #fce9bc;
+  color: #fff;
+  text-align: center;
+  /* display: flex; */
+}
+.scan-code image{
+  display: inline-block;
+  margin-top: 20rpx;
+  width: 150rpx !important;
+  height: 150rpx !important;
+}
+text{
+  display: block;
+  width: 200rpx;
+  text-align: center;
+  margin: auto;
+}

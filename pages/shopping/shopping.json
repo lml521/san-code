@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "swipers":"/components/swipers/swipers",
+    "code":"/components/code/code"
+  }
 }

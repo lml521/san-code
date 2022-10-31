@@ -1,0 +1,4 @@
+<view class="scan-code" bindtap="handelScanCode">
+    <image src="/assets/images/qrcode.png"></image>
+    <text>请扫描商品条形码</text>
+</view>

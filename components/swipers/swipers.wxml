@@ -1,0 +1,8 @@
+<!--components/swipers/swipers.wxml-->
+<swiper autoplay 	circular 	indicator-dots 	indicator-active-color="#fff" 
+  :interval="5000" :duration="500">
+  <swiper-item wx:for="{{advertList}}" wx:key="{{item.id}}">
+    <image src="{{item.imgUrl}}"></image>
+  </swiper-item>
+
+</swiper>

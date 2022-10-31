@@ -1,1 +1,13 @@
-<view>扫码购物</view>
+<!-- 扫码购物 -->
+<view class="container">
+  <!-- 轮播图 -->
+  <view class="advert">
+    <swipers advertList="{{advertList}}"></swipers>
+  </view>
+  <view class="main">
+  <code bindhandelScanCode="handelScanCode"></code>
+ 
+  </view>
+
+  <!-- <view>按钮</view> -->
+</view>
