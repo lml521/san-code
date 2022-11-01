@@ -1,1 +1,62 @@
 /* pages/cart/cart.wxss */
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container .list {
+  flex: 1;
+
+}
+.container .list .listItem{
+  border-bottom: 1px solid #333;
+  padding: 10rpx 10rpx 30rpx 10rpx;
+}
+.list .listItem .specification{
+  color: #666;
+  margin: 10rpx 0;
+}
+.list .listItem .price{
+  color: #ff0000;
+  font-size: 38rpx;
+}
+
+
+.container .footer{
+  height: 160rpx;
+  background-color: pink;
+  border-top: 2rpx solid #ccc;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.container .footer .total{
+  height: 60rpx;
+  line-height: 60rpx;
+  padding-left: 20rpx;
+  background-color: #fff;
+}
+.footer .total text{
+  color: #ff0000;
+}
+
+.container .footer .group{
+  flex: 1;
+  display: flex;
+}
+.footer .group view {
+  flex: 1;
+  background-color: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 40rpx;
+}
+.footer .group view.add{
+  background-color: #ffa72b;
+}
+.footer .group view.settlement{
+  background-color: #ff0000;
+}
