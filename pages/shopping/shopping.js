@@ -49,7 +49,8 @@ Page({
     // let {result}=response
     console.log(response);
     if(response.result.length>0){
-      console.log(123);
+      console.log(123,response.result);
+      
       wx.navigateTo({
         url: '/pages/cart/cart',
       })

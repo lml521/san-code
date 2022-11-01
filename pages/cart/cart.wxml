@@ -2,14 +2,21 @@
 <view class="container">
   <view class="list">
     <view class="listItem">
-    <view class="title">农夫山泉东方树叶茉莉花茶500ml</view>
-    
-    <view class="specification">
-    规格：500ml/瓶
-    </view>
-    <view class="price">
-    ￥3.5
-    </view>
+      <view class="title">农夫山泉东方树叶茉莉花茶500ml</view>
+
+      <view class="specification">
+        规格：500ml/瓶
+      </view>
+      <view class="operation">
+        <view class="price">
+          ￥3.5
+        </view>
+        <view class="computed">
+          <view class="decrease btn">-</view>
+          <input type="text"  />
+          <view class="increase btn">+</view>
+        </view>
+      </view>
     </view>
   </view>
   <view class="footer">
@@ -20,7 +27,7 @@
       <view class="add">继续添加</view>
       <view class="settlement">
         去结算
-        <text>(0)</text>
+        <text class="settlementNum">(0)</text>
       </view>
     </view>
   </view>
