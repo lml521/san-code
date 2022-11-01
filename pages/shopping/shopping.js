@@ -1,4 +1,5 @@
 // pages/shopping/shopping.js
+import shoppingModel from '../../model/shoppingModel'
 Page({
 
   /**
@@ -34,11 +35,29 @@ Page({
   handelScanCode(){
     wx.scanCode({
       onlyFromCamera: true,
-      success (res) {
-        console.log(res)
+      success:(res)=>{
+        let {result} =res
+        console.log(result);
+        this.getProductInfo(result)
       }
     })
   },
+ async getProductInfo(result){
+   let data ={qcode:result}
+    let response=await shoppingModel.getProductInfoApi(data)
+    console.log(response,5);
+    // let {result}=response
+    console.log(response);
+    if(response.result.length>0){
+      console.log(123);
+      wx.navigateTo({
+        url: '/pages/cart/cart',
+      })
+    }
+  },
+
+
+
 
   /**
    * 生命周期函数--监听页面加载
