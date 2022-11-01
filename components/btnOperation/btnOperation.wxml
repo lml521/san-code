@@ -1,12 +1,6 @@
-<!-- 购物车 -->
-<view class="container">
-  <view class="list">
-    <shoppingItem shoppingList="{{shoppingList}}" 
-    bindgetsetSub="getsetSub"></shoppingItem>
-  </view>
+<!--components/btnOperation/btnOperation.wxml-->
 
-  <view class="footer">
-    <!-- <btnOperation shoppingList="{{shoppingList}}"></btnOperation> -->
+<view class="footer">
     <view class="total">
       总计：<text>￥{{subNum}}</text>
     </view>
@@ -17,7 +11,4 @@
         <text class="settlementNum">({{shoppingList.length}})</text>
       </view>
     </view>
- 
- 
   </view>
-</view>

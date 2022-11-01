@@ -1,0 +1,53 @@
+/* components/shoppingItem/shoppingItem.wxss */
+
+.listItem{
+  border-bottom: 1px solid #333;
+  padding: 10rpx 10rpx 30rpx 10rpx;
+}
+.listItem .specification{
+  color: #666;
+  margin: 10rpx 0;
+}
+.operation{
+  display: flex;
+  justify-content: space-between;
+  /* margin: 10rpx 0; */
+}
+ .listItem .price{
+  color: #ff0000;
+  font-size: 38rpx;
+  margin-top: -5rpx;
+}
+
+.computed{
+  display: flex;
+}
+.computed input {
+  display: inline-block;
+  width: 160rpx;
+  border: 4rpx solid #ffa72b;
+  border-radius: 60rpx;
+  height: 60rpx;
+  margin: 0 20rpx;
+  text-align: center;
+}
+
+.computed .btn{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  font-size: 40rpx;
+  font-weight: 700;
+  text-align: center;
+  line-height: 60rpx;
+}
+
+.computed .decrease{
+  border: 4rpx solid #ffa72b;
+  color: #ffa72b;
+}
+.computed .increase{
+  border: 4rpx solid #ffa72b;
+  background-color: #ffa72b;
+  color: #fff;
+}

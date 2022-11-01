@@ -1,5 +1,6 @@
 // pages/shopping/shopping.js
 import shoppingModel from '../../model/shoppingModel'
+import {addCart} from '../../common/cart'
 Page({
 
   /**
@@ -8,6 +9,7 @@ Page({
   data: {
     // 轮播图数据
     advertList:[],
+   
   },
   // 获取轮播图数据
   getAdvertList(){
@@ -37,7 +39,6 @@ Page({
       onlyFromCamera: true,
       success:(res)=>{
         let {result} =res
-        console.log(result);
         this.getProductInfo(result)
       }
     })
@@ -45,14 +46,15 @@ Page({
  async getProductInfo(result){
    let data ={qcode:result}
     let response=await shoppingModel.getProductInfoApi(data)
-    console.log(response,5);
-    // let {result}=response
-    console.log(response);
     if(response.result.length>0){
-      console.log(123,response.result);
-      
+      addCart(response.result[0])
       wx.navigateTo({
         url: '/pages/cart/cart',
+      })
+    }else{
+      wx.showToast({
+        title:"获取不到商品信息",
+        icon:"none"
       })
     }
   },

@@ -1,15 +1,6 @@
-/* pages/cart/cart.wxss */
-.container{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.container .list {
-  flex: 1;
-  padding-bottom: 160rpx;
-}
+/* components/btnOperation/btnOperation.wxss */
 
-.container .footer{
+.footer {
   height: 160rpx;
   background-color: pink;
   border-top: 2rpx solid #ccc;
@@ -20,7 +11,6 @@
   left: 0;
   width: 100%;
 }
-
 
 .footer .total {
   height: 60rpx;

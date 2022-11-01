@@ -4,6 +4,7 @@
     "pages/optimal/optimal",
     "pages/personal/personal",
     "pages/cart/cart"
+    
   ],
   "tabBar": {
     "color": "",

@@ -1,4 +1,7 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "shoppingItem": "/components/shoppingItem/shoppingItem",
+    "btnOperation":"/components/btnOperation/btnOperation"
+  },
   "navigationBarTitleText": "购物车"
 }
