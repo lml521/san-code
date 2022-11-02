@@ -1,6 +1,6 @@
 <!--购物车组件-->
- <view class="listItem" wx:for="{{shoppingList}}" wx:key="{{item._id}}">
-
+ <view class="listItem" wx:for="{{shoppingList}}" 
+ wx:key="{{item._id}}">
       <view class="title">{{item.title}}</view>
       <view class="specification">
         规格：500ml/瓶
@@ -10,7 +10,7 @@
           ￥{{item.price}}
         </view>
         <view class="computed">
-          <view class="decrease btn"bindtap="subNum" data-id="{{item._id}}" >-</view>
+          <view class="decrease btn"bindtap="subNum" data-id="{{item._id}}">-</view>
           <input type="text" value="{{item.num}}" readonly />
           <view class="increase btn" bindtap="addNum" data-id="{{item._id}}">+</view>
         </view>

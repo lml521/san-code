@@ -17,7 +17,5 @@
         <text class="settlementNum">({{shoppingList.length}})</text>
       </view>
     </view>
- 
- 
   </view>
 </view>

@@ -5,52 +5,55 @@ Page({
    * 页面的初始数据
    */
   data: {
-    shoppingList:[],
-    subNum:0
+    shoppingList: [],
+    subNum: 0
+  },
+  // 总计
+  getsetSub() {
+    let cartList = wx.getStorageSync('cartList')||[]
+    let sum = 0;
+    cartList.forEach(item => {
+      sum += (Number(item.price) * Number(item.num))
+    })
+    this.setData({
+      subNum: sum.toFixed(2)
+    })
   },
 
-    getsetSub(){
-      let cartList=wx.getStorageSync('cartList')
-      let sum = 0;
-      cartList.forEach(item => {
-        sum += Number(item.price) * Number(item.num)
-      })
-      this.setData({
-        subNum:sum
-      })
-    },
-
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
-    this.getsetSub()
-    let shoppingList=  wx.getStorageSync('cartList')
-    console.log(shoppingList);
+  // 获取本地购物车数据
+  getCartList() {
+    let shoppingList = wx.getStorageSync('cartList')
     this.setData({
       shoppingList,
     })
   },
 
   /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad(options) {
+    this.getsetSub()
+    this.getCartList()
+
+  },
+
+  /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady() {
-  },
+  onReady() {},
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow() {
- 
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide() {
-  
+
   },
 
   /**
