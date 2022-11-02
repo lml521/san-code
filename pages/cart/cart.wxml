@@ -11,7 +11,7 @@
       总计：<text>￥{{subNum}}</text>
     </view>
     <view class="group">
-      <view class="add">继续添加</view>
+      <view class="add" bindtap="continueAdd">继续添加</view>
       <view class="settlement">
         去结算
         <text class="settlementNum">({{shoppingList.length}})</text>

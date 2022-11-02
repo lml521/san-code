@@ -1,4 +1,7 @@
-// pages/cart/cart.js
+// pages/cart/cart.js\\\
+
+import shoppingModel from '../../model/shoppingModel'
+import {addCart} from '../../common/cart'
 Page({
 
   /**
@@ -27,6 +30,39 @@ Page({
       shoppingList,
     })
   },
+  //  继续添加
+  continueAdd(){
+    wx.scanCode({
+      onlyFromCamera: true,
+      success:(res)=>{
+        let {result} =res
+        console.log(res);
+        this.getProductInfo(result)
+      }
+    })
+
+  },
+
+
+  async getProductInfo(result){
+    let data ={qcode:result}
+    console.log(data);
+     let response=await shoppingModel.getProductInfoApi(data)
+     if(response.result.length>0){
+       console.log(response.result[0],'response.result[0]');
+       addCart(response.result[0])
+
+      this.setData({
+        shoppingList: wx.getStorageSync('cartList')
+      })
+     }else{
+       wx.showToast({
+         title:"获取不到商品信息",
+         icon:"none"
+       })
+     }
+   },
+
 
   /**
    * 生命周期函数--监听页面加载
@@ -46,7 +82,8 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
+    this.getsetSub()
+    this.getCartList()
   },
 
   /**
