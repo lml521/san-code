@@ -60,3 +60,34 @@
 .footer .settlement .settlementNum {
   margin-left: 10rpx;
 }
+
+.emptyCart{
+  /* background-color: pink; */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 250rpx;
+  /* overflow: hidden; */
+  /* justify-content: ; */
+}
+.emptyCart .title{
+  font-size: 60rpx;
+  color:#cccccc;
+}
+
+.emptyCart .img{
+  width: 60%;
+}
+
+.emptyCart .scanCode{
+  background-color:#f5c048;
+  width: 400rpx;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40rpx;
+  font-weight: 700;
+  border-radius: 10rpx;
+}

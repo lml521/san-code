@@ -1,0 +1,70 @@
+/* pages/confirmPayment/confirmPayment.wxss */
+.container{
+  height: 100%;
+  background-color: #f9f9f9;
+}
+
+.container  .cartList .cart-item{
+  height: 120rpx;
+  background-color: #fff;
+  padding: 30rpx 10rpx 10rpx 10rpx;
+  border-bottom: 1px solid #ccc;
+}
+.cartList  .cart-item .content{
+  display: flex;
+  justify-content: space-between;
+}
+
+.cartList  .cart-item  .number{
+ float: right;
+ margin-top: 20rpx;
+}
+
+
+.cartList .shoppingNum{
+  height: 80rpx;
+  background-color: #fff;
+  text-align: center;
+  line-height: 80rpx;
+
+}
+
+
+
+.item-box{
+  height: 120rpx;
+  line-height: 120rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+  padding: 0 30rpx;
+}
+.item-box  .left{
+  float: left;
+}
+.item-box  .right{
+  float: right;
+}
+
+.red{
+  color: red !important;
+}
+
+.footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 0 0 30rpx;
+  box-sizing: border-box;
+  height: 160rpx;
+  line-height: 160rpx;
+  border-top: 1px solid #ccc;
+}
+
+.footer .paymentBtn{
+  background-color: #ffa72b;
+  color: #fff;
+  width: 300rpx;
+  text-align: center;
+  
+}

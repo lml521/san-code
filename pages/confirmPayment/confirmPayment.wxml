@@ -1,0 +1,40 @@
+<!-- <view>确认支付页面</view> -->
+
+<view class="container">
+  <view class="cartList">
+    <view class="cart-item">
+      <view class="content">
+        <view class="title">农夫山泉东方树叶茉莉花茶500ml</view>
+        <view class="price red">￥3.5</view>
+      </view>
+      <view class="number">
+        ×<text>1</text>
+      </view>
+    </view>
+    <view class="shoppingNum">
+      共2件商品 展开
+    </view>
+  </view>
+
+  <!-- 余额 -->
+  <view class="balance item-box ">
+    <view class="left">余额<text class="red">(￥4)</text></view>
+    <view class="right">3</view>
+  </view>
+
+  <!-- 商品金额 -->
+  <view class="allPrice item-box">
+    <view class="left">商品金额</view>
+    <view class="right red">￥15.5</view>
+  </view>
+  <!-- 余额减扣 -->
+  <view class="allPrice item-box">
+    <view class="left">余额减扣</view>
+    <view class="right red">-￥4</view>
+  </view>
+
+  <view class="footer item-box">
+    <view class="left">实际支付<text class="red">￥11.5</text></view>
+    <view class="right paymentBtn">确认支付</view>
+  </view>
+</view>

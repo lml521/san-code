@@ -11,9 +11,14 @@ Page({
     shoppingList: [],
     subNum: 0
   },
+
+ 
   // 总计
   getsetSub() {
     let cartList = wx.getStorageSync('cartList')||[]
+    this.setData({
+      shoppingList:cartList
+    })
     let sum = 0;
     cartList.forEach(item => {
       sum += (Number(item.price) * Number(item.num))
@@ -42,8 +47,7 @@ Page({
     })
 
   },
-
-
+// 调用接口
   async getProductInfo(result){
     let data ={qcode:result}
     console.log(data);
@@ -62,7 +66,12 @@ Page({
        })
      }
    },
-
+// 去结算
+   closeAccount(){
+     wx.navigateTo({
+       url: '/pages/confirmPayment/confirmPayment',
+     })
+   },
 
   /**
    * 生命周期函数--监听页面加载

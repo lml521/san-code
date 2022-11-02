@@ -1,5 +1,5 @@
 <!-- 购物车 -->
-<view class="container">
+<view class="container" wx:if="{{shoppingList.length>0}}">
   <view class="list">
     <shoppingItem shoppingList="{{shoppingList}}" 
     bindgetsetSub="getsetSub"></shoppingItem>
@@ -12,10 +12,16 @@
     </view>
     <view class="group">
       <view class="add" bindtap="continueAdd">继续添加</view>
-      <view class="settlement">
+      <view class="settlement" bindtap="closeAccount">
         去结算
         <text class="settlementNum">({{shoppingList.length}})</text>
       </view>
     </view>
   </view>
+</view>
+
+<view wx:else class="emptyCart">
+<view class="title">购物车是空的哦~</view>
+<image class="img" src="../../assets/images/cart.png"></image>
+<view class="scanCode" bindtap="continueAdd">扫一扫条形码</view>
 </view>
