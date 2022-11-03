@@ -2,6 +2,7 @@
 
 import shoppingModel from '../../model/shoppingModel'
 import {addCart} from '../../common/cart'
+import getsetSub from '../../common/computed-total-price'
 Page({
 
   /**
@@ -14,17 +15,10 @@ Page({
 
  
   // 总计
-  getsetSub() {
-    let cartList = wx.getStorageSync('cartList')||[]
+  getsetNumber() {
+  let subNum=  getsetSub()
     this.setData({
-      shoppingList:cartList
-    })
-    let sum = 0;
-    cartList.forEach(item => {
-      sum += (Number(item.price) * Number(item.num))
-    })
-    this.setData({
-      subNum: sum.toFixed(2)
+      subNum
     })
   },
 
@@ -65,6 +59,7 @@ Page({
          icon:"none"
        })
      }
+     this.getsetNumber()
    },
 // 去结算
    closeAccount(){
@@ -77,7 +72,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    this.getsetSub()
+    this.getsetNumber()
     this.getCartList()
 
   },
@@ -91,7 +86,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-    this.getsetSub()
+    this.getsetNumber()
     this.getCartList()
   },
 

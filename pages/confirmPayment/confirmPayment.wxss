@@ -2,8 +2,16 @@
 .container{
   height: 100%;
   background-color: #f9f9f9;
+  position: relative;
 }
 
+.box{
+  height: 100%;
+  box-sizing: border-box;
+  padding-bottom: 120rpx;
+  display: flex;
+  flex-direction: column;
+}
 .container  .cartList .cart-item{
   height: 120rpx;
   background-color: #fff;
@@ -56,8 +64,8 @@
   width: 100%;
   padding: 0 0 0 30rpx;
   box-sizing: border-box;
-  height: 160rpx;
-  line-height: 160rpx;
+  height: 120rpx;
+  line-height: 120rpx;
   border-top: 1px solid #ccc;
 }
 
@@ -67,4 +75,15 @@
   width: 300rpx;
   text-align: center;
   
+}
+.pic{
+  margin-left: 10rpx;
+}
+
+.container .box .order-tips{
+  flex: 1;
+  color: #989898;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

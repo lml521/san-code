@@ -4,7 +4,8 @@
     "pages/optimal/optimal",
     "pages/personal/personal",
     "pages/cart/cart",
-    "pages/confirmPayment/confirmPayment"
+    "pages/confirmPayment/confirmPayment",
+    "pages/paySuccess/paySuccess"
   ],
   "tabBar": {
     "color": "",

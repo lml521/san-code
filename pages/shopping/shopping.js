@@ -9,8 +9,17 @@ Page({
   data: {
     // 轮播图数据
     advertList:[],
+    status:[],
    
   },
+getCartList(){
+ let list= wx.getStorageSync('cartList')
+ this.setData({
+  status:list
+ })
+},
+
+
   // 获取轮播图数据
   getAdvertList(){
     // 模拟轮播图数据
@@ -35,6 +44,13 @@ Page({
 
   // 点击扫描商品事件
   handelScanCode(){
+// 跳转支付页面
+    if(this.data.status.length>0){
+      wx.navigateTo({
+        url: '/pages/confirmPayment/confirmPayment',
+      })
+      return 
+    }
     wx.scanCode({
       onlyFromCamera: true,
       success:(res)=>{
@@ -74,13 +90,14 @@ Page({
    */
   onReady() {
     this.getAdvertList()
+    this.getCartList()
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
+    this.getCartList()
   },
 
   /**

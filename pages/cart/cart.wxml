@@ -1,8 +1,7 @@
 <!-- 购物车 -->
 <view class="container" wx:if="{{shoppingList.length>0}}">
   <view class="list">
-    <shoppingItem shoppingList="{{shoppingList}}" 
-    bindgetsetSub="getsetSub"></shoppingItem>
+    <shoppingItem shoppingList="{{shoppingList}}" bindgetsetSub="getsetNumber"></shoppingItem>
   </view>
 
   <view class="footer">
@@ -21,7 +20,7 @@
 </view>
 
 <view wx:else class="emptyCart">
-<view class="title">购物车是空的哦~</view>
-<image class="img" src="../../assets/images/cart.png"></image>
-<view class="scanCode" bindtap="continueAdd">扫一扫条形码</view>
+  <view class="title">购物车是空的哦~</view>
+  <image class="img" src="../../assets/images/cart.png"></image>
+  <view class="scanCode" bindtap="continueAdd">扫一扫条形码</view>
 </view>

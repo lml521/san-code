@@ -4,6 +4,10 @@ Component({
    * 组件的属性列表
    */
   properties: {
+    status:{
+      type:Array,
+      default:()=>[]
+    }
 
   },
 
@@ -21,7 +25,8 @@ Component({
     // 子传父 当点击扫描商品按钮 传递到父组件
     handelScanCode(){
       this.triggerEvent('handelScanCode')
-    }
+    },
 
-  }
+  },
+
 })

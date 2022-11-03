@@ -5,7 +5,7 @@
     <swipers advertList="{{advertList}}"></swipers>
   </view>
   <view class="main">
-  <code bindhandelScanCode="handelScanCode"></code>
+  <code bindhandelScanCode="handelScanCode" status="{{status}}"></code>
  
   </view>
 

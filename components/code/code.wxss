@@ -1,5 +1,6 @@
 /* components/code/code.wxss */
 .scan-code{
+  position: relative;
   width: 300rpx;
   height: 300rpx;
   background-color: #f5ba47;
@@ -7,12 +8,15 @@
   margin-top: 100rpx;
   border: 20rpx solid #fce9bc;
   color: #fff;
+   display: flex;
+  flex-direction: column;
+  justify-content: space-around; 
   text-align: center;
   /* display: flex; */
 }
 .scan-code image{
   display: inline-block;
-  margin-top: 20rpx;
+  margin: 20rpx auto 0;
   width: 150rpx !important;
   height: 150rpx !important;
 }
@@ -21,4 +25,21 @@ text{
   width: 200rpx;
   text-align: center;
   margin: auto;
+}
+.mt{
+  margin-top: 40rpx !important;
+
+}
+
+.number{
+  position: absolute;
+  width:50rpx;
+  height:50rpx;
+  background-color: red;
+  border-radius: 50%;
+  text-align: center;
+  line-height:50rpx;
+  top: 30rpx;
+  left: 200rpx;
+
 }

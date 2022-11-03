@@ -1,40 +1,51 @@
 <!-- <view>确认支付页面</view> -->
 
 <view class="container">
-  <view class="cartList">
-    <view class="cart-item">
-      <view class="content">
-        <view class="title">农夫山泉东方树叶茉莉花茶500ml</view>
-        <view class="price red">￥3.5</view>
+  <view class="box">
+
+    <view class="cartList">
+      <view class="cart-item" wx:for="{{orderlist}}" 
+      wx:if="{{index<orderSize}}">
+        <view class="content">
+          <view class="title">{{item.title}}</view>
+          <view class="price red">￥{{item.price}}</view>
+        </view>
+        <view class="number">
+          ×<text>{{item.num}}</text>
+        </view>
       </view>
-      <view class="number">
-        ×<text>1</text>
+      <view class="shoppingNum" bindtap="handelChangeSpread"
+       wx:if="{{orderlist.length>1}}">
+        共{{orderlist.length}}件商品 {{orderSize==orderlist.length?'收起':'展开'}}
       </view>
     </view>
-    <view class="shoppingNum">
-      共2件商品 展开
+
+    <!-- 余额 -->
+    <view class="balance item-box ">
+      <view class="left">余额<text class="red pic">(￥{{balance}})</text></view>
+      <view class="right">
+      <switch checked="{{switchStatus}}"
+       color="#f3bd4b" bindchange="switchStatusChange"></switch>
+      </view>
+    </view>
+
+    <!-- 商品金额 -->
+    <view class="allPrice item-box">
+      <view class="left">商品金额</view>
+      <view class="right red">￥{{practicalPrice}}</view>
+    </view>
+    <!-- 余额减扣 -->
+    <view class="allPrice item-box">
+      <view class="left">余额减扣</view>
+      <view class="right red">-￥{{reducePrice}}</view>
+    </view>
+    <view class="order-tips">
+      <icon class="icon-box-img" type="warn" color="#C9C9C9"></icon>
+    请支付完成后携带商品
     </view>
   </view>
-
-  <!-- 余额 -->
-  <view class="balance item-box ">
-    <view class="left">余额<text class="red">(￥4)</text></view>
-    <view class="right">3</view>
-  </view>
-
-  <!-- 商品金额 -->
-  <view class="allPrice item-box">
-    <view class="left">商品金额</view>
-    <view class="right red">￥15.5</view>
-  </view>
-  <!-- 余额减扣 -->
-  <view class="allPrice item-box">
-    <view class="left">余额减扣</view>
-    <view class="right red">-￥4</view>
-  </view>
-
   <view class="footer item-box">
-    <view class="left">实际支付<text class="red">￥11.5</text></view>
-    <view class="right paymentBtn">确认支付</view>
+    <view class="left">实际支付<text class="red">￥{{actualPrice}}</text></view>
+    <view class="right paymentBtn" bindtap="paymentBtn">确认支付</view>
   </view>
 </view>
