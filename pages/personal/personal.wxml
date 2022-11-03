@@ -9,108 +9,48 @@
       </view>
     </view>
   </view>
-
-  <!-- <view class="item-box">
-    <view class="left">
-      <image src="../../assets/images/user/money.png"></image>
-      我的钱包
-    </view>
-    <view class="arrows"></view>
-  </view>
-
-  <view class="item-box">
-    <view class="left">
-      <image src="../../assets/images/user/money.png"></image>
-      我的钱包
-    </view>
-    <view class="arrows"></view>
-  </view>
-  <view class="item-box">
-    <view class="left">
-      <image src="../../assets/images/user/money.png"></image>
-      微店订单
-    </view>
-    <view class="arrows"></view>
-  </view>
-  <view class="item-box">
-    <view class="left">
-      <image src="../../assets/images/user/money.png"></image>
-      优选订单
-    </view>
-    <view class="arrows"></view>
-  </view>
-  <view class="item-box">
-    <view class="left">
-      <image src="../../assets/images/user/money.png"></image>
-      优选订单
-    </view>
-    <view class="arrows"></view>
-  </view>
-  <view class="item-box">
-    <view class="left">
-      <image src="../../assets/images/user/money.png"></image>
-      优选订单
-    </view>
-    <view class="arrows"></view>
-  </view> -->
-
-
-  <ul >
+  <ul>
     <li class="item-box">
       <view class="left">
-      <image src="../../assets/images/user/money.png"></image>
-      我的钱包
-    </view>
-    <view class="arrows"></view>
-    </li>
-
-
-    <li class="item-box">
-      <view class="left">
-      <image src="../../assets/images/user/shop_order.png"></image>
-      微店订单
-    </view>
-    <view class="arrows"></view>
-    </li>
-
-    <li class="item-box">
-      <view class="left">
-      <image src="../../assets/images/user/online_order.png"></image>
-      优选订单
-    </view>
-    <view class="arrows"></view>
+        <image src="../../assets/images/user/money.png"></image>
+        我的钱包
+      </view>
+      <view class="arrows"></view>
     </li>
     <li class="item-box">
       <view class="left">
-      <image src="../../assets/images/user/address.png"></image>
-      地址管理
-    </view>
-    <view class="arrows"></view>
+        <image src="../../assets/images/user/shop_order.png"></image>
+        微店订单
+      </view>
+      <view class="arrows"></view>
     </li>
-
     <li class="item-box">
       <view class="left">
-      <image src="../../assets/images/user/tel.png"></image>
-      联系客服
-    </view>
-    <view class="arrows"></view>
+        <image src="../../assets/images/user/online_order.png"></image>
+        优选订单
+      </view>
+      <view class="arrows"></view>
     </li>
-
     <li class="item-box">
       <view class="left">
-      <image src="../../assets/images/user/feedback.png"></image>
-      意见反馈
-    </view>
-    <view class="arrows"></view>
+        <image src="../../assets/images/user/address.png"></image>
+        地址管理
+      </view>
+      <view class="arrows"></view>
     </li>
-
-   
-   
-
-    
-
-
-
+    <li class="item-box">
+      <view class="left">
+        <image src="../../assets/images/user/tel.png"></image>
+        联系客服
+      </view>
+      <view class="arrows"></view>
+    </li>
+    <li class="item-box">
+      <view class="left">
+        <image src="../../assets/images/user/feedback.png"></image>
+        意见反馈
+      </view>
+      <view class="arrows"></view>
+    </li>
   </ul>
-
 </view>
