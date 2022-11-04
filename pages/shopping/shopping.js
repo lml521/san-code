@@ -61,9 +61,11 @@ getCartList(){
   },
  async getProductInfo(result){
    let data ={qcode:result}
-    let response=await shoppingModel.getProductInfoApi(data)
-    if(response.result.length>0){
-      addCart(response.result[0])
+    let res=await shoppingModel.getProductInfoApi(data)
+    console.log(res,65);
+    const response = res.result
+    if(response.length>0){
+      addCart(response[0])
       wx.navigateTo({
         url: '/pages/cart/cart',
       })

@@ -21,7 +21,6 @@ class Http {
     wx.showLoading({
       title: '加载中',
     })
-
     return Http._request({
       url,
       method,
@@ -51,8 +50,6 @@ class Http {
       }
       // 错误提示
       Http._showErrorMessage(res.statusCode, res.data.msg)
-
-
     } catch (error) {
       console.log(error);
 
@@ -69,7 +66,7 @@ class Http {
       icon: 'none',
       duration: 2000
     })
-    注意
+    
   }
 }
 

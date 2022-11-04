@@ -2,7 +2,7 @@ import Http from '../utils/request'
 
 class shoppingModel{
   static getProductInfoApi(data){
-    return Http.request({url:"/getProduct",method:"GET",data})
+    return Http.request({url:"/api/getProduct",method:"GET",data})
   }
 }
 
